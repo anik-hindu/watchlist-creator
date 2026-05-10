@@ -5,30 +5,50 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>WatchList Creator</title>
 
+    <!-- Goggle Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+
     <!-- MY CSS -->
     <link rel="stylesheet" href="style.css" />
 
     <script type="module" src="./script.js"></script>
   </head>
   <body>
-    <header>
-      <nav>
-        <h1>Find your film</h1>
-        <a href="#">My Watchlist</a>
-      </nav>
-      <section>
+    <div class="container">
+      <header>
+        <nav>
+          <h1>Find your film</h1>
+          <a href="#">My Watchlist</a>
+        </nav>
+      </header>
+      <main>
+        <div class="decoration">
+          <img src="./assets/movie-icon.png" alt="" />
+          <p class="decoration-text">Start Exploring</p>
+        </div>
+      </main>
+      <section class="search-bar">
         <form>
-          <img src="./assets/search-icon.png" alt="" />
-          <input type="text" placeholder="Blade Runner" />
-          <button>Search</button>
+          <div class="movie-input">
+            <label for="movie-query"
+              ><img src="./assets/search-icon.png" alt="" />
+            </label>
+            <input
+              id="movie-query"
+              type="text"
+              placeholder="Search for a movie"
+              name="movieQuery"
+              class="search-input"
+            />
+          </div>
+          <button type="submit" class="search-btn">Search</button>
         </form>
       </section>
-    </header>
-    <main>
-      <div>
-        <img src="./assets/movie-icon.png" alt="" />
-        <p>Start Exploring</p>
-      </div>
-    </main>
+    </div>
   </body>
 </html>

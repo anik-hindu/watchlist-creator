@@ -27,13 +27,32 @@
         </nav>
       </header>
       <main>
-        <div class="decoration">
+        <section class="movies" id="articles">
+          <article class="movie">
+            <img src="" alt="" class="poster-movie" />
+            <div class="movie-content">
+              <h2 class="title-movie">Movie Title</h2>
+              <div class="info-movie">
+                <p class="runtime">116 min</p>
+                <p class="genre">Drama, Mystery, Sci-fi</p>
+                <button id="add-watchlist-btn">Watchlist</button>
+              </div>
+              <p class="plot-movie">
+                A blade runner must pursue and terminate four replicants who
+                stole a ship in space, and have returned to Earth to find their
+                creator.
+              </p>
+            </div>
+          </article>
+          <div class="line"></div>
+        </section>
+        <div class="decoration" id="decoration">
           <img src="./assets/movie-icon.png" alt="" />
           <p class="decoration-text">Start Exploring</p>
         </div>
       </main>
       <section class="search-bar">
-        <form>
+        <form id="search-form">
           <div class="movie-input">
             <label for="movie-query"
               ><img src="./assets/search-icon.png" alt="" />
@@ -46,7 +65,9 @@
               class="search-input"
             />
           </div>
-          <button type="submit" class="search-btn">Search</button>
+          <button type="submit" id="search-btn" class="search-btn">
+            Search
+          </button>
         </form>
       </section>
     </div>

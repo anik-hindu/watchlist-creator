@@ -3,73 +3,140 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>WatchList Creator</title>
+    <title>Watchlist Creator</title>
 
-    <!-- Goggle Fonts -->
+    <!-- Google fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
       rel="stylesheet"
     />
-
     <!-- MY CSS -->
     <link rel="stylesheet" href="style.css" />
-
-    <script type="module" src="./script.js"></script>
   </head>
   <body>
-    <div class="container">
-      <header>
-        <nav>
-          <h1>Find your film</h1>
-          <a href="#">My Watchlist</a>
-        </nav>
-      </header>
-      <main>
-        <section class="movies" id="articles">
-          <article class="movie">
-            <img src="" alt="" class="poster-movie" />
-            <div class="movie-content">
-              <h2 class="title-movie">Movie Title</h2>
-              <div class="info-movie">
+    <header>
+      <nav>
+        <h1 class="header-title">Find your film</h1>
+        <a href="./watchlist.html" class="nav-link">My Watchlist</a>
+      </nav>
+    </header>
+    <main>
+      <section class="search-bar">
+        <div class="container-search">
+          <img src="./assets/search-icon.png" class="search-icon" alt="" />
+          <input
+            type="text"
+            class="search-input"
+            placeholder="Search for a movie"
+          />
+          <button class="search-btn">Search</button>
+        </div>
+      </section>
+      <section class="decoration">
+        <img src="./assets/movie-icon.png" alt="" class="image-decoration" />
+        <p class="text-decoration">Start exploring</p>
+      </section>
+
+      <section class="movies">
+        <article class="movie">
+          <div class="container-movie">
+            <img src="./assets/blade.png" alt="" class="poster-movie" />
+            <div class="right-movie">
+              <div class="title-group">
+                <h2 class="title-movie">Blade Runner</h2>
+                <img
+                  src=".//assets/rating-icon.png"
+                  class="rating-icon"
+                  alt=""
+                />
+                <p class="text-rating">8.1</p>
+              </div>
+              <div class="meta-info">
                 <p class="runtime">116 min</p>
                 <p class="genre">Drama, Mystery, Sci-fi</p>
-                <button id="add-watchlist-btn">Watchlist</button>
+                <div class="save-btn-group">
+                  <img src="./assets/plus-icon.png" alt="" class="save-icon" />
+                  <button class="save-btn">Watchlist</button>
+                </div>
               </div>
-              <p class="plot-movie">
+              <p class="plot">
                 A blade runner must pursue and terminate four replicants who
                 stole a ship in space, and have returned to Earth to find their
                 creator.
               </p>
             </div>
-          </article>
-          <div class="line"></div>
-        </section>
-        <div class="decoration" id="decoration">
-          <img src="./assets/movie-icon.png" alt="" />
-          <p class="decoration-text">Start Exploring</p>
-        </div>
-      </main>
-      <section class="search-bar">
-        <form id="search-form">
-          <div class="movie-input">
-            <label for="movie-query"
-              ><img src="./assets/search-icon.png" alt="" />
-            </label>
-            <input
-              id="movie-query"
-              type="text"
-              placeholder="Search for a movie"
-              name="movieQuery"
-              class="search-input"
-            />
           </div>
-          <button type="submit" id="search-btn" class="search-btn">
-            Search
-          </button>
-        </form>
+          <div class="line"></div>
+        </article>
+        <article class="movie">
+          <div class="container-movie">
+            <img src="./assets/blade.png" alt="" class="poster-movie" />
+            <div class="right-movie">
+              <div class="title-group">
+                <h2 class="title-movie">Blade Runner</h2>
+                <img
+                  src=".//assets/rating-icon.png"
+                  class="rating-icon"
+                  alt=""
+                />
+                <p class="text-rating">8.1</p>
+              </div>
+              <div class="meta-info">
+                <p class="runtime">116 min</p>
+                <p class="genre">Drama, Mystery, Sci-fi</p>
+                <div class="save-btn-group">
+                  <img src="./assets/plus-icon.png" alt="" class="save-icon" />
+                  <button class="save-btn">Watchlist</button>
+                </div>
+              </div>
+              <p class="plot">
+                A blade runner must pursue and terminate four replicants who
+                stole a ship in space, and have returned to Earth to find their
+                creator.
+              </p>
+            </div>
+          </div>
+          <div class="line"></div>
+        </article>
+        <article class="movie">
+          <div class="container-movie">
+            <img src="./assets/blade.png" alt="" class="poster-movie" />
+            <div class="right-movie">
+              <div class="title-group">
+                <h2 class="title-movie">Blade Runner</h2>
+                <img
+                  src=".//assets/rating-icon.png"
+                  class="rating-icon"
+                  alt=""
+                />
+                <p class="text-rating">8.1</p>
+              </div>
+              <div class="meta-info">
+                <p class="runtime">116 min</p>
+                <p class="genre">Drama, Mystery, Sci-fi</p>
+                <div class="save-btn-group">
+                  <img src="./assets/plus-icon.png" alt="" class="save-icon" />
+                  <button class="save-btn">Watchlist</button>
+                </div>
+              </div>
+              <p class="plot">
+                A blade runner must pursue and terminate four replicants who
+                stole a ship in space, and have returned to Earth to find their
+                creator.
+              </p>
+            </div>
+          </div>
+          <div class="line"></div>
+        </article>
       </section>
-    </div>
+
+      <section class="search-error">
+        <p class="error">
+          Unable to find what you’re looking for. Please try another search.
+        </p>
+      </section>
+    </main>
   </body>
 </html>

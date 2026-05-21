@@ -18,28 +18,11 @@
   <body>
     <header class="header flex-align-center">
       <nav class="header__nav flex-align-center">
-        <h1 class="header__title">Find your film</h1>
-        <a href="./watchlist.html" class="header__link">My Watchlist</a>
+        <h1 class="header__title">My Watchlist</h1>
+        <a href="./index.html" class="header__link">Search for movies </a>
       </nav>
     </header>
     <main>
-      <section class="search flex-align-center">
-        <div class="search__container flex-align-center">
-          <img src="./assets/search-icon.png" class="search__icon" alt="" />
-          <input
-            type="text"
-            class="search__input"
-            placeholder="Search for a movie"
-          />
-          <button class="search__btn">Search</button>
-        </div>
-      </section>
-
-      <section class="decoration">
-        <img src="./assets/movie-icon.png" alt="" class="decoration__image" />
-        <p class="decoration__text">Start exploring</p>
-      </section>
-
       <section class="movies hidden">
         <article class="movie">
           <div class="movie__container flex-align-center">
@@ -59,11 +42,11 @@
                 <p class="small-text">Drama, Mystery, Sci-fi</p>
                 <button class="movie__save-btn flex-align-center">
                   <img
-                    src="./assets/plus-icon.png"
+                    src="./assets/minus-icon.png"
                     alt=""
                     class="movie__save-icon"
                   />
-                  Watchlist
+                  Remove
                 </button>
               </div>
               <p class="movie__plot">
@@ -77,10 +60,15 @@
         </article>
       </section>
 
-      <section class="error hidden">
-        <p class="message">
-          Unable to find what you’re looking for. Please try another search.
-        </p>
+      <section class="empty-watchlist">
+        <p class="message">Your watchlist is looking a little empty...</p>
+        <a href="./index.html" class="flex-align-center empty-watchlist__link"
+          ><img
+            src="./assets/plus-icon.png"
+            class="empty-watchlist__icon"
+            alt=""
+          />Let’s add some movies!</a
+        >
       </section>
     </main>
   </body>

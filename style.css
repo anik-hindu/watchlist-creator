@@ -54,6 +54,14 @@ p {
   line-height: 1.25;
 }
 
+.message {
+  font-weight: 700;
+  font-size: 1.125rem;
+  color: #787878;
+  line-height: 1.5;
+  margin: auto;
+}
+
 /* || TYPOGRAPHY */
 
 .header__title {
@@ -257,12 +265,29 @@ p {
   margin: auto;
 }
 
-.error__message {
-  font-weight: 700;
-  font-size: 1.125rem;
-  color: #787878;
-  line-height: 1.25;
+/* || EMPTY WATCHLIST MESSAGE */
+
+.empty-watchlist {
   margin: auto;
+}
+
+.empty-watchlist__icon {
+  height: 18px;
+  width: 18px;
+}
+
+.empty-watchlist__container {
+}
+
+.empty-watchlist__link {
+  justify-content: center;
+  color: white;
+  text-decoration: none;
+  font-size: 0.875rem;
+  font-weight: 700;
+  line-height: 1.5;
+  gap: 8px;
+  margin: 16px 0;
 }
 
 /* MEDIA QUERIES */
@@ -276,7 +301,7 @@ p {
     flex-shrink: 1;
   }
 
-  .error__message {
+  .message {
     text-align: center;
     max-width: 320px;
     width: 100%;

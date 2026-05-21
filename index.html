@@ -14,6 +14,9 @@
     />
     <!-- MY CSS -->
     <link rel="stylesheet" href="style.css" />
+
+    <!-- Scripts -->
+    <script type="module" src="./script.js"></script>
   </head>
   <body>
     <header class="header flex-align-center">
@@ -24,60 +27,26 @@
     </header>
     <main>
       <section class="search flex-align-center">
-        <div class="search__container flex-align-center">
+        <form class="search__container flex-align-center">
           <img src="./assets/search-icon.png" class="search__icon" alt="" />
           <input
+            id="search-input"
             type="text"
             class="search__input"
             placeholder="Search for a movie"
           />
-          <button class="search__btn">Search</button>
-        </div>
+          <button class="search__btn" id="search-btn">Search</button>
+        </form>
       </section>
 
-      <section class="decoration">
+      <section class="decoration" id="decoration-el">
         <img src="./assets/movie-icon.png" alt="" class="decoration__image" />
         <p class="decoration__text">Start exploring</p>
       </section>
 
-      <section class="movies hidden">
-        <article class="movie">
-          <div class="movie__container flex-align-center">
-            <img src="./assets/blade.png" alt="" class="movie__poster" />
-            <div class="movie__info">
-              <div class="flex-align-center">
-                <h2 class="movie__title">Blade Runner</h2>
-                <img
-                  src=".//assets/rating-icon.png"
-                  class="movie__rating-icon"
-                  alt=""
-                />
-                <p class="small-text">8.1</p>
-              </div>
-              <div class="movie__meta-info flex-align-center">
-                <p class="small-text">116 min</p>
-                <p class="small-text">Drama, Mystery, Sci-fi</p>
-                <button class="movie__save-btn flex-align-center">
-                  <img
-                    src="./assets/plus-icon.png"
-                    alt=""
-                    class="movie__save-icon"
-                  />
-                  Watchlist
-                </button>
-              </div>
-              <p class="movie__plot">
-                A blade runner must pursue and terminate four replicants who
-                stole a ship in space, and have returned to Earth to find their
-                creator.
-              </p>
-            </div>
-          </div>
-          <div class="line"></div>
-        </article>
-      </section>
+      <section class="movies hidden" id="movies-el"></section>
 
-      <section class="error hidden">
+      <section class="error hidden" id="error-el">
         <p class="message">
           Unable to find what you’re looking for. Please try another search.
         </p>

@@ -229,9 +229,7 @@ p {
 }
 
 .movie__meta-info {
-  flex-wrap: wrap;
-  justify-content: space-between;
-  gap: 4px;
+  gap: 18px;
   max-width: 300px;
   width: 100%;
   margin-top: 10px;

@@ -164,7 +164,7 @@ nav {
 /* Movies Search Result */
 
 .movies {
-  /* display: none; */
+  display: none;
   padding-top: 40px;
   width: 80%;
   margin: 0 auto;
@@ -213,10 +213,11 @@ nav {
 }
 
 .rating-icon {
+  height: 15px;
+  width: 15px;
   margin: 0 2px 0 8px;
 }
 
-.rating-icon,
 .save-icon {
   height: 16px;
   width: 16px;
@@ -252,7 +253,8 @@ nav {
 /* Error Message */
 
 .search-error {
-  display: none;
+  /* display: none; */
+  margin: auto;
 }
 
 .error {
@@ -260,7 +262,11 @@ nav {
   font-size: 1.125rem;
   color: #787878;
   line-height: 1.25;
+  margin: auto;
 }
+
+/* MEDIA QUERIES */
+
 @media (max-width: 480px) {
   .header-title {
     font-size: 1.5rem;
@@ -268,5 +274,10 @@ nav {
 
   .search-btn {
     flex-shrink: 1;
+  }
+
+  .error {
+    max-width: 320px;
+    width: 100%;
   }
 }

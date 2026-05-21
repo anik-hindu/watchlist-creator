@@ -16,52 +16,57 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <header>
-      <nav>
-        <h1 class="header-title">Find your film</h1>
-        <a href="./watchlist.html" class="nav-link">My Watchlist</a>
+    <header class="header flex-align-center">
+      <nav class="header__nav flex-align-center">
+        <h1 class="header__title">Find your film</h1>
+        <a href="./watchlist.html" class="header__link">My Watchlist</a>
       </nav>
     </header>
     <main>
-      <section class="search-bar">
-        <div class="container-search">
-          <img src="./assets/search-icon.png" class="search-icon" alt="" />
+      <section class="search flex-align-center">
+        <div class="search__container flex-align-center">
+          <img src="./assets/search-icon.png" class="search__icon" alt="" />
           <input
             type="text"
-            class="search-input"
+            class="search__input"
             placeholder="Search for a movie"
           />
-          <button class="search-btn">Search</button>
+          <button class="search__btn">Search</button>
         </div>
       </section>
-      <section class="decoration">
-        <img src="./assets/movie-icon.png" alt="" class="image-decoration" />
-        <p class="text-decoration">Start exploring</p>
+
+      <section class="decoration hidden">
+        <img src="./assets/movie-icon.png" alt="" class="decoration__image" />
+        <p class="decoration__text">Start exploring</p>
       </section>
 
-      <section class="movies">
+      <section class="movies hidden">
         <article class="movie">
-          <div class="container-movie">
-            <img src="./assets/blade.png" alt="" class="poster-movie" />
-            <div class="right-movie">
-              <div class="title-group">
-                <h2 class="title-movie">Blade Runner</h2>
+          <div class="movie__container flex-align-center">
+            <img src="./assets/blade.png" alt="" class="movie__poster" />
+            <div class="movie__info">
+              <div class="flex-align-center">
+                <h2 class="movie__title">Blade Runner</h2>
                 <img
                   src=".//assets/rating-icon.png"
-                  class="rating-icon"
+                  class="movie__rating-icon"
                   alt=""
                 />
-                <p class="text-rating">8.1</p>
+                <p class="small-text">8.1</p>
               </div>
-              <div class="meta-info">
-                <p class="runtime">116 min</p>
-                <p class="genre">Drama, Mystery, Sci-fi</p>
-                <div class="save-btn-group">
-                  <img src="./assets/plus-icon.png" alt="" class="save-icon" />
-                  <button class="save-btn">Watchlist</button>
-                </div>
+              <div class="movie__meta-info flex-align-center">
+                <p class="small-text">116 min</p>
+                <p class="small-text">Drama, Mystery, Sci-fi</p>
+                <button class="movie__save-btn flex-align-center">
+                  <img
+                    src="./assets/plus-icon.png"
+                    alt=""
+                    class="movie__save-icon"
+                  />
+                  Watchlist
+                </button>
               </div>
-              <p class="plot">
+              <p class="movie__plot">
                 A blade runner must pursue and terminate four replicants who
                 stole a ship in space, and have returned to Earth to find their
                 creator.
@@ -72,8 +77,8 @@
         </article>
       </section>
 
-      <section class="search-error">
-        <p class="error">
+      <section class="error">
+        <p class="error__message">
           Unable to find what you’re looking for. Please try another search.
         </p>
       </section>

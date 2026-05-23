@@ -14,6 +14,9 @@
     />
     <!-- MY CSS -->
     <link rel="stylesheet" href="style.css" />
+
+    <!-- My Scripts -->
+    <script type="module" src="./watch.js"></script>
   </head>
   <body>
     <header class="header flex-align-center">
@@ -23,8 +26,8 @@
       </nav>
     </header>
     <main>
-      <section class="movies hidden">
-        <article class="movie">
+      <section class="movies hidden" id="saved-movies">
+        <!-- <article class="movie">
           <div class="movie__container flex-align-center">
             <img src="./assets/blade.png" alt="" class="movie__poster" />
             <div class="movie__info">
@@ -57,10 +60,10 @@
             </div>
           </div>
           <div class="line"></div>
-        </article>
+        </article> -->
       </section>
 
-      <section class="empty-watchlist">
+      <section class="empty-watchlist" id="empty-watchlist">
         <p class="message">Your watchlist is looking a little empty...</p>
         <a href="./index.html" class="flex-align-center empty-watchlist__link"
           ><img

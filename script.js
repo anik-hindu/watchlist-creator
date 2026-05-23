@@ -1,5 +1,6 @@
 const API_KEY = "25c56382";
 const BASE_URL = "https://www.omdbapi.com/";
+const savedMovies = JSON.parse(localStorage.getItem("movies")) || [];
 
 const searchBtn = document.getElementById("search-btn");
 const searchInput = document.getElementById("search-input");
@@ -8,6 +9,7 @@ const moviesEl = document.getElementById("movies-el");
 const errorEl = document.getElementById("error-el");
 
 searchBtn.addEventListener("click", handleSearch);
+document.addEventListener("click", handleBtnClick);
 
 async function handleSearch(e) {
   e.preventDefault();
@@ -24,6 +26,43 @@ async function handleSearch(e) {
     }
     decorationEl.classList.add("hidden");
     searchInput.value = "";
+  }
+}
+
+function handleBtnClick(e) {
+  if (e.target.dataset.movie) {
+    const movie = JSON.parse(e.target.dataset.movie);
+    const movieBtn = document.querySelector(
+      `button[data-id="${e.target.dataset.id}"]`,
+    );
+
+    if (savedMovies.some((movie) => movie.id === e.target.dataset.id)) {
+      savedMovies.splice(
+        savedMovies.findIndex((fmovie) => fmovie.id === e.target.dataset.id),
+        1,
+      );
+      movieBtn.innerHTML = `<img
+      src="./assets/plus-icon.png"
+      alt=""
+      class="movie__save-icon"
+      data-movie='${JSON.stringify(movie).replace(/'/g, "&apos;")}'
+      data-id='${e.target.dataset.id}'
+      />
+      Watchlist`;
+    } else {
+      savedMovies.push(movie);
+      movieBtn.innerHTML = `<img
+      src="./assets/minus-icon.png"
+      alt=""
+      class="movie__save-icon"
+      data-movie='${JSON.stringify(movie).replace(/'/g, "&apos;")}'
+      data-id='${e.target.dataset.id}'
+      />
+      Remove`;
+    }
+    console.log(savedMovies);
+    localStorage.removeItem("movies");
+    localStorage.setItem("movies", JSON.stringify(savedMovies));
   }
 }
 
@@ -55,6 +94,7 @@ async function getMoviesData(moviesId) {
       plot: movie.Plot,
       poster: movie.Poster,
       rating: movie.imdbRating,
+      id: id,
     });
   }
   return moviesData;
@@ -64,6 +104,30 @@ function renderSearch(movies) {
   moviesEl.classList.remove("hidden");
   let moviesHtmlStr = ``;
   for (let data of movies) {
+    let buttonContent;
+    if (savedMovies.some((movie) => movie.id === data.id)) {
+      buttonContent = `
+        <img
+          src="./assets/minus-icon.png"
+          alt=""
+          class="movie__save-icon"
+          data-movie='${JSON.stringify(data).replace(/'/g, "&apos;")}'
+          data-id='${data.id}'
+        />
+        Remove
+      `;
+    } else {
+      buttonContent = `
+        <img
+          src="./assets/plus-icon.png"
+          alt=""
+          class="movie__save-icon"
+          data-movie='${JSON.stringify(data).replace(/'/g, "&apos;")}'
+          data-id='${data.id}'
+        />
+        Watchlist
+      `;
+    }
     moviesHtmlStr += `
        <article class="movie">
           <div class="movie__container flex-align-center">
@@ -81,13 +145,8 @@ function renderSearch(movies) {
               <div class="movie__meta-info flex-align-center">
                 <p class="small-text">${data.runtime}</p>
                 <p class="small-text">${data.genre}</p>
-                <button class="movie__save-btn flex-align-center">
-                  <img
-                    src="./assets/plus-icon.png"
-                    alt=""
-                    class="movie__save-icon"
-                  />
-                  Watchlist
+                <button class="movie__save-btn flex-align-center" data-movie='${JSON.stringify(data).replace(/'/g, "&apos;")}' data-id='${data.id}'>
+                  ${buttonContent}
                 </button>
               </div>
               <p class="movie__plot">

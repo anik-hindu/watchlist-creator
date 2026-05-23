@@ -60,7 +60,6 @@ function handleBtnClick(e) {
       />
       Remove`;
     }
-    console.log(savedMovies);
     localStorage.removeItem("movies");
     localStorage.setItem("movies", JSON.stringify(savedMovies));
   }

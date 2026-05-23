@@ -19,7 +19,6 @@ function handleBtnClick(e) {
 }
 
 function renderWatchlist() {
-  console.log(savedMovies);
   if (savedMovies.length > 0) {
     savedMoviesEl.classList.remove("hidden");
     emptyWatchlistEl.classList.add("hidden");

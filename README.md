@@ -2,7 +2,7 @@
 
 Welcome! This is a simple web application that lets you create and manage a personal watchlist. It was built as a solo project after I completed the asynchronous JavaScript module in the [Scrimba Frontend Career Path](https://scrimba.com/).
 
-## Live Preview: https://anik-hindu.github.io/watchlist-creator/
+### Live Preview: https://anik-hindu.github.io/watchlist-creator/
 
 ## About
 
@@ -27,43 +27,7 @@ I’m a beginner learning web development. This project helped me practice async
 
 ---
 
-## Getting Started
-
-No special setup needed! Just:
-
-1. Clone the repo:
-   ```sh
-   git clone https://github.com/anik-hindu/watchlist-creator.git
-   ```
-2. Open `index.html` in your favorite browser.
-
-That's it! You can now start adding and removing items from your watchlist.
-
----
-
-## Project Structure
-
-```
-watchlist-creator/
-├── index.html
-├── style.css
-├── script.js
-...
-```
-
----
-
 ## Acknowledgments
 
 - Built as part of the solo projects in the **Scrimba Frontend Career Path**.
 - Huge thanks to Scrimba for their fun and practical lessons!
-
----
-
-## License
-
-MIT
-
----
-
-Feel free to explore, fork, or suggest improvements—I'm still learning and open to feedback!
